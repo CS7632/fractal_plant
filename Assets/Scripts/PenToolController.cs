@@ -13,6 +13,7 @@ public class PenToolController : MonoBehaviour
     [SerializeField] private float maxAngleVariance = 3.0f;
     [SerializeField] private float segmentScalar = 0.15f;
     [SerializeField] private int numEpochs = 100;
+    [SerializeField] private float xfSplitPoint = 0.5f;
     
 
     private string GeneratePlant()
@@ -27,7 +28,7 @@ public class PenToolController : MonoBehaviour
             
             while (replaceAt < 0)
             {
-                var repl = (Random.Range(0, 1.0f) < 0.3) ? 'x' : 'f';
+                var repl = (Random.Range(0, 1.0f) < xfSplitPoint) ? 'x' : 'f';
                 v = (repl == 'x') ? "f+[[x]-x]-f[-fx]+x" : "ff";
                 
                 replaceAt = Random.Range(0, current.Length);

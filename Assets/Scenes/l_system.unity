@@ -573,9 +573,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 215266127350486635, guid: 785eb02c2782e493487d9d9d2c3588dc, type: 3}
   baseAngle: 15
-  maxAngleVariance: 3
-  segmentScalar: 0.25
-  numEpochs: 250
+  maxAngleVariance: 2
+  segmentScalar: 0.2
+  numEpochs: 350
+  xfSplitPoint: 0.4
 --- !u!1001 &215266125982952254
 PrefabInstance:
   m_ObjectHideFlags: 0
